@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f0f4f8;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* HEADER */
+header {
+    background: #ffffff;
+    padding: 25px 40px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-radius: 0 0 30px 30px;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-weight: 700;
+    font-size: 2.8rem;
+    color: #222;
+    letter-spacing: 1.2px;
+}
+
+/* NAVIGATION */
+nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+nav a, .logout-button {
+    color: #555;
+    font-weight: 500;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1.1px;
+    text-decoration: none;
+    padding: 10px 18px;
+    border-radius: 50px;
+    background: #e7ecf3;
+    box-shadow:
+      6px 6px 10px #c1c7d0,
+      -6px -6px 10px #ffffff;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+nav a:hover, .logout-button:hover {
+    background: #a7c7e7;
+    color: #fff;
+    box-shadow:
+      inset 6px 6px 10px #6b8ac7,
+      inset -6px -6px 10px #b3d2ff;
+}
+
+.logout-button {
+    border: none;
+    background: #f1a9a0;
+    color: #6b2222;
+    box-shadow:
+      6px 6px 10px #c46a6a,
+      -6px -6px 10px #ffbaba;
+    font-weight: 600;
+}
+
+.logout-button:hover {
+    background: #d45454;
+    color: #fff;
+    box-shadow:
+      inset 6px 6px 10px #8c2e2e,
+      inset -6px -6px 10px #d97373;
+}
+
+/* Cart icon */
+.cart-icon {
+    width: 26px;
+    height: 26px;
+    filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.1));
+}
+
+/* MAIN CONTENT */
+.main-container {
+    flex-grow: 1;
+    padding: 50px 20px;
+    background: #f0f4f8;
+    display: flex;
+    justify-content: center;
+}
+
+.product-list {
+    max-width: 1200px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 32px;
+}
+
+/* PRODUCT CARD */
+.product {
+    background: #f0f4f8;
+    border-radius: 25px;
+    padding: 30px 25px 40px 25px;
+    box-shadow:
+      15px 15px 30px #cad6e3,
+      -15px -15px 30px #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.product:hover {
+    transform: translateY(-12px);
+    box-shadow:
+      25px 25px 50px #b0bfcc,
+      -25px -25px 50px #ffffff;
+}
+
+.product h3 {
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #2a3a53;
+    text-align: center;
+}
+
+.product p {
+    flex-grow: 1;
+    font-weight: 300;
+    font-size: 1rem;
+    color: #5a6b85;
+    margin-bottom: 25px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.product-image {
+    width: 100%;
+    height: 180px;
+    border-radius: 20px;
+    object-fit: cover;
+    margin-bottom: 25px;
+    box-shadow:
+      8px 8px 15px #b7c4d8,
+      -8px -8px 15px #ffffff;
+    transition: box-shadow 0.3s ease;
+}
+
+.product:hover .product-image {
+    box-shadow:
+      12px 12px 25px #a2b0ca,
+      -12px -12px 25px #f9fbff;
+}
+
+/* BUTTON */
+.add-to-cart-button {
+    font-weight: 600;
+    font-size: 1.15rem;
+    padding: 14px 0;
+    border-radius: 50px;
+    border: none;
+    background: #a1caff;
+    background-image: linear-gradient(145deg, #a1caff, #6a9eff);
+    color: #1e2e52;
+    box-shadow:
+      7px 7px 15px #6a8bd4,
+      -7px -7px 15px #c0d6ff;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    user-select: none;
+    width: 100%;
+}
+
+.add-to-cart-button:hover {
+    background-image: linear-gradient(145deg, #6a9eff, #a1caff);
+    transform: scale(1.08);
+    box-shadow:
+      inset 5px 5px 10px #6a8bd4,
+      inset -5px -5px 10px #c0d6ff;
+}
+
+/* FOOTER */
+footer {
+    background: #ffffff;
+    padding: 25px 15px;
+    box-shadow: 0 -6px 15px rgba(0,0,0,0.05);
+    text-align: center;
+    font-weight: 500;
+    font-size: 1.05rem;
+    color: #6b7c93;
+    border-radius: 30px 30px 0 0;
+    margin-top: auto;
+}
